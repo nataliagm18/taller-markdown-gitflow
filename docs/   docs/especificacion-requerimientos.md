@@ -27,7 +27,7 @@
 | cantidadMaximaEstudiantes | Int          | Número máximo de estudiantes que podrán participar en la tutoría. |
 
 #### Reglas o condiciones
-- La fecha de la tutoría no puede ser anterior a la fecha actual.
+- La fecha de la tutoría no puede ser anterior a la fecha actual, si es una fecha anterior el programa no permitirá registrar la tutoría.
 - La cantidad máxima de estudiantes debe ser mínimo 1 y máximo 10.
 - El profesor debe proporcionar la información necesaria para registrar la tutoría.
 - El sistema debe asignar un identificador único a cada tutoría creada.
@@ -39,8 +39,7 @@
 | mensajeConfirmacion | String | Mensaje que informa al profesor que la tutoría fue creada correctamente. |
 
 #### Resultado esperado
-La tutoría quedo registrada correctamente.
-
+El sistema arrojara que el registro de la tutoria fue exitoso, dará un Id único y mostrará un mensaje de confirmación.
 
 ### RF-02 - [Consultar tutorías]
 
