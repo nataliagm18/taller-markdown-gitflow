@@ -1,6 +1,7 @@
 # Especificación de Requerimientos
 
 ## 1. Descripción del sistema
+El sistema permite a los profesores crear y gestionar tutorías académicas, registrando información como el tema, fecha, hora, código del profesor y cantidad máxima de estudiantes. Los estudiantes podrán consultar las tutorías disponibles utilizando una fecha y, opcionalmente, un tema o asignatura de interés. También podrán inscribirse en las tutorías siempre que estén activos en la Universidad, existan cupos disponibles y no estén inscritos previamente. Finalmente, los estudiantes podrán cancelar su inscripción cuando exista una inscripción previa y la tutoría todavía no haya comenzado. El sistema realizará las validaciones correspondientes y mostrará mensajes informando el resultado de cada operación.
 
 ## 2. Integrantes
 
