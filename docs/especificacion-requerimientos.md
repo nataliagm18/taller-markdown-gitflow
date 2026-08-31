@@ -137,7 +137,65 @@ El sistema elimina la inscripción existente, libera nuevamente el cupo correspo
 
 ### Ramas utilizadas
 
+Durante el desarrollo del taller se utilizaron y se utilizarán las siguientes ramas:
+
+- `main`: rama principal del repositorio, utilizada para mantener la versión estable del trabajo.
+- `develop`: rama de integración, donde se van uniendo los requerimientos antes de llevarlos a `main`.
+- `feature/rf01/registro-tutoria`: rama utilizada para desarrollar y documentar el RF-01, correspondiente al registro de tutorías.
+- `feature/rf02/consultar-tutorias`: rama utilizada para desarrollar y documentar el RF-02, correspondiente a la consulta de tutorías.
+- `feature/rf03/...`: rama que deberá utilizarse para desarrollar y documentar el RF-03.
+- `feature/rf04/...`: rama que deberá utilizarse para desarrollar y documentar el RF-04.
+
+Cada requerimiento debe trabajarse en una rama `feature` independiente, creada a partir de `develop`, para evitar modificar directamente las ramas principales.
+
 ### Proceso de integración
+
+Cada requerimiento se trabaja inicialmente en una rama `feature` independiente creada a partir de `develop`. Los cambios realizados en cada requerimiento se guardaron mediante commits y luego se subieron al repositorio remoto con `git push`.
+
+Para integrar los cambios se utilizaron  Pull Requests desde las ramas `feature` hacia `develop`.
+
+El flujo general esperado es el siguiente:
+
+`feature/rf01/registro-tutoria` → `develop`
+
+`feature/rf02/consultar-tutorias` → `develop`
+
+`feature/rf03/inscripcion-tutoria` → `develop`
+
+`feature/rf04/cancelacion-inscripcion` → `develop`
+
+En el caso del RF-01 y RF-02, los cambios fueron trabajados en sus respectivas ramas y posteriormente integrados a `develop` mediante Pull Requests.
+
+Para RF-03 y RF-04 se siguió el mismo procedimiento: cada integrante creo su rama a partir de la versión más reciente de `develop`, se realizó únicamente los cambios correspondientes a su requerimiento, se hizo los commit, se subio  la rama al repositorio remoto y se creo un Pull Request hacia `develop`.
+
+Durante el proceso se detectó que algunos cambios habían sido integrados de forma anticipada en `main`. Para corregir el flujo de trabajo, esos cambios fueron revertidos en `main`, manteniendo los requerimientos correctamente integrados en `develop`.
+
+Antes de comenzar RF-03 y RF-04, los integrantes encargados actualizaron `develop` para trabajar sobre la versión más reciente y evitar sobrescribir los cambios de RF-01 y RF-02.
+
+Cuando los cuatro requerimientos estuvieron terminados, revisados e integrados correctamente en `develop`, se integraron final mediante un Pull Request desde `develop` hacia `main`.
+
+El flujo general del proyecto quedo de la siguiente manera:
+
+`feature/rf01` → `develop`
+
+`feature/rf02` → `develop`
+
+`feature/rf03` → `develop`
+
+`feature/rf04` → `develop`
+
+`develop` → `main`
 
 ### Conflictos encontrados
 
+Se presentó un conflicto al actualizar la rama `feature/rf02/consultar-tutorias` con los cambios que ya se encontraban en `develop`.
+
+El conflicto ocurrió en el archivo de especificación de requerimientos porque tanto RF-01 como RF-02 habían realizado modificaciones sobre el mismo archivo. Git mostró las marcas de conflicto `<<<<<<<`, `=======` y `>>>>>>>`.
+
+Para resolverlo, se revisó manualmente el contenido de ambas versiones y se conservaron los cambios correspondientes a los dos requerimientos. Se mantuvo la información del RF-01 que ya estaba integrada en `develop` y se agregó correctamente la información del RF-02. También se completó información faltante detectada durante la revisión.
+
+Después de eliminar las marcas de conflicto, el archivo se agregó nuevamente con `git add`, se realizó un commit de resolución y se subió la rama actualizada. Finalmente, se creó el Pull Request de `feature/rf02/consultar-tutorias` hacia `develop` y los cambios fueron integrados correctamente.
+
+Para evitar conflictos similares durante el desarrollo de RF-03 y RF-04, cada integrante  actualizo su rama con los últimos cambios de `develop` antes de comenzar o antes de realizar el Pull Request. Si se presentaban nuevos conflictos, estos debian resolverse manualmente conservando la información de todos los requerimientos y evitando sobrescribir el trabajo realizado por otros integrantes.
+
+De esta forma, cada requerimiento puede desarrollarse de manera independiente y posteriormente integrarse de forma controlada en `develop` antes de realizar la integración final hacia `main`.
