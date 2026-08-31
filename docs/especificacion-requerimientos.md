@@ -7,7 +7,7 @@
 - Nombre: Saray Jimenez
 - Nombre: Isabella Gordillo
 - Nombre: Natalia Giraldo
-- Nombre: Leider Rodriguez Caicedo
+- Nombre:Leider Rodriguez Caicedo
 
 ## 3. Requerimientos Funcionales
 
