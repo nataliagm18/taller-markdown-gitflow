@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Especificación de Requerimientos
 
 ## 1. Descripción del sistema
@@ -199,3 +200,4 @@ Después de eliminar las marcas de conflicto, el archivo se agregó nuevamente c
 Para evitar conflictos similares durante el desarrollo de RF-03 y RF-04, cada integrante  actualizo su rama con los últimos cambios de `develop` antes de comenzar o antes de realizar el Pull Request. Si se presentaban nuevos conflictos, estos debian resolverse manualmente conservando la información de todos los requerimientos y evitando sobrescribir el trabajo realizado por otros integrantes.
 
 De esta forma, cada requerimiento puede desarrollarse de manera independiente y posteriormente integrarse de forma controlada en `develop` antes de realizar la integración final hacia `main`.
+
