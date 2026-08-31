@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Especificación de Requerimientos
 
 ## 1. Descripción del sistema
