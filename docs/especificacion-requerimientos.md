@@ -73,23 +73,36 @@ cantidadDeCupos| int | Capacidad max. de estudiantes en la tutoria |
 #### Resultado esperado
 -	Si existen tutorías que correspondan con la búsqueda, el sistema deberá desplegar la información, si no es el caso el estudiante recibiría un mensaje informándolo.
 
-### RF-03 - [Nombre del requerimiento]
+### RF-03 - [Inscribir estudiante a tutoría]
 
 #### Resumen
+
+El sistema debe permitir que un estudiante se inscriba a una tutoría disponible, proporcionando su código estudiantil y el identificador de la tutoría a la que desea inscribirse.
 
 #### Entradas
 
 | Entrada | Tipo de dato | Descripción |
 |---|---|---|
+| codigoEstudiante | String | Código que identifica al estudiante que solicita la inscripción. |
+| idTutoria | String | Identificador único de la tutoría a la que el estudiante desea inscribirse. |
 
 #### Reglas o condiciones
+
+- El estudiante debe encontrarse activo en la Universidad.
+- La tutoría debe existir.
+- La tutoría debe tener al menos un cupo disponible.
+- El estudiante no puede encontrarse previamente inscrito en la misma tutoría.
 
 #### Salidas
 
 | Salida | Tipo de dato | Descripción |
 |---|---|---|
+| mensajeConfirmacion | String | Mensaje que informa al estudiante que la inscripción fue realizada correctamente. |
+| mensajeError | String | Mensaje que informa al estudiante el motivo por el cual la inscripción no pudo realizarse. |
 
 #### Resultado esperado
+
+La inscripción del estudiante queda registrada y la cantidad de cupos disponibles de la tutoría se actualiza (disminuye en 1).
 
 
 ### RF-04 - Cancelar inscripción a tutoría
