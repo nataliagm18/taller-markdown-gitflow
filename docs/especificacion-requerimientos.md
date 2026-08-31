@@ -160,9 +160,9 @@ El flujo general esperado es el siguiente:
 
 `feature/rf02/consultar-tutorias` → `develop`
 
-`feature/rf03/...` → `develop`
+`feature/rf03/inscripcion-tutoria` → `develop`
 
-`feature/rf04/...` → `develop`
+`feature/rf04/cancelacion-inscripcion` → `develop`
 
 En el caso del RF-01 y RF-02, los cambios fueron trabajados en sus respectivas ramas y posteriormente integrados a `develop` mediante Pull Requests.
 
